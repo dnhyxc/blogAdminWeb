@@ -1,0 +1,31 @@
+@import '~@styles/common.less';
+
+.footerWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  box-shadow: 0px -5px 5px -5px #ddd;
+  background-color: @fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark {
+  background-color: @dark-bgc-deep;
+  color: @dark-fc;
+}
+
+.showFooter {
+  height: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 960px) {
+  .footerWrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}

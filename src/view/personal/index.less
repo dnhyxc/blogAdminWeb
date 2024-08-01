@@ -1,0 +1,251 @@
+@import '~@styles/common.less';
+
+.removeConfirmStyle {
+  .antdConform();
+}
+
+.darkRemoveConfirmStyle {
+  .darkAntdConform();
+}
+
+.Personal {
+  position: relative;
+  width: 100%;
+
+  .changeIconWrap {
+    .changeIconWrap();
+  }
+
+  .contentWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding: 9px 0 9px 9px;
+
+    .content {
+      display: flex;
+      justify-content: center;
+
+      .wrap {
+        width: 100%;
+        height: 100%;
+        padding-right: 9px;
+        text-align: center;
+
+        .userInfo {
+          display: flex;
+          justify-content: flex-start;
+          padding: 10px 20px;
+          margin-bottom: 10px;
+          background-color: @fff;
+          border-radius: 5px;
+
+          .image {
+            height: 140px;
+            width: 140px;
+            margin-right: 20px;
+            border-radius: 5px;
+            cursor: default;
+          }
+
+          .user {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-right: 20px;
+
+            .userName {
+              font-size: 26px;
+              font-weight: 600;
+              margin-top: -10px;
+              margin-bottom: 10px;
+            }
+
+            .job,
+            .motto {
+              margin-bottom: 10px;
+            }
+
+            .introduce {
+              text-align: start;
+            }
+          }
+
+          .actions {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 3px;
+
+            .icons {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .link {
+                margin-right: 10px;
+
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+
+              .iconWrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 15px;
+                height: 30px;
+                width: 30px;
+                line-height: 30px;
+                border-radius: 30px;
+                text-align: center;
+                cursor: pointer;
+
+                &:last-child {
+                  margin-right: 0;
+                }
+
+                .adsIcon {
+                  font-size: 34px;
+                }
+
+                .juejin {
+                  background-color: #4e5969;
+                  color: @fff;
+                  width: 100%;
+                  font-size: 22px;
+                  border-radius: 30px;
+                }
+
+                .wangzhiIcon {
+                  font-size: 30px;
+                }
+              }
+            }
+          }
+        }
+
+        .tabsWrap {
+          .wrapClass {
+            width: 100%;
+          }
+
+          .emptyWrap {
+            .emptyWrap();
+            padding: 20px 0;
+          }
+
+          :global {
+            .ant-tabs > .ant-tabs-nav {
+              padding: 0 10px;
+              margin-bottom: 9px;
+              background-color: @fff;
+              border-radius: 5px;
+            }
+
+            .ant-tabs-top > .ant-tabs-nav::before {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contentPadding {
+    padding: 0 0 9px 9px;
+  }
+
+  .iconWrap {
+    cursor: pointer;
+  }
+}
+
+.dark {
+  .contentWrap {
+    .content {
+      .wrap {
+        .userInfo {
+          background-color: @dark-bgc-deep;
+          color: @dark-fc;
+
+          .actions {
+            .icons {
+              .iconWrap {
+                .adsIcon {
+                  font-size: 34px;
+                  color: @dark-fc;
+                }
+
+                .juejin {
+                  color: @dark-bgc;
+                  background-color: @dark-fc;
+                }
+
+                .wangzhiIcon {
+                  font-size: 30px;
+                  color: @dark-fc;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.darkIcon {
+  color: @dark-fc;
+}
+
+@media screen and (max-width: 960px) {
+  .Personal {
+    .contentWrap {
+      padding: 0;
+      .content {
+        .wrap {
+          padding-right: 0;
+          .userInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            .image {
+              width: 120px;
+              height: 120px;
+              border-radius: 120px;
+              margin-right: 0;
+            }
+
+            .user {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-top: 18px;
+              margin-right: 0;
+
+              .introduce {
+                text-align: center;
+              }
+            }
+
+            .actions {
+              margin-top: 10px;
+
+              .icons {
+                margin-bottom: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

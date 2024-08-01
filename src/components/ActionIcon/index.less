@@ -1,0 +1,193 @@
+@import '~@styles/common.less';
+
+.actionContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 70px;
+  transition: all 0.3s ease-in-out;
+  background-color: @fff;
+  box-shadow: 0 0 5px @background;
+
+  .iconList {
+    margin-right: 20px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .actionIcon {
+      font-size: 24px;
+    }
+
+    .theme {
+      color: @sunlight;
+    }
+
+    .text {
+      font-size: 12px;
+      color: @font-4;
+    }
+  }
+}
+
+.commentStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 12px;
+  height: 70px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: @sky-blue;
+  box-shadow: 0 0 5px @fff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 10;
+
+  .icon {
+    color: @menu-active;
+    font-size: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    width: 20px;
+    transition: all 0.3s ease-in-out;
+
+    .icon {
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.actionList {
+  position: fixed;
+  left: 0;
+  bottom: 64px;
+  height: 70px;
+  z-index: 10;
+
+  .MusicIcon {
+    .commentStyle;
+    left: 0;
+    bottom: 64px;
+  }
+
+  .show {
+    left: 150px !important;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .actionContent {
+    .actionContent;
+
+    left: -150px;
+    width: 150px;
+  }
+
+  .showContent {
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.detailActionList {
+  position: fixed;
+  left: 0;
+  bottom: 64px;
+  height: 70px;
+  z-index: 10;
+
+  .detailMusicIcon {
+    .commentStyle;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    left: 0;
+    bottom: 0;
+  }
+
+  .show {
+    left: 80px !important;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .actionContent {
+    .actionContent;
+
+    left: -80px;
+    width: 80px;
+  }
+
+  .showContent {
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.darkIcon {
+  background-color: @dark-bgc-deep !important;
+}
+
+.noHideMenuActionList {
+  .show {
+    left: 80px !important;
+  }
+
+  .actionContent {
+    left: -80px;
+    width: 80px;
+  }
+
+  .showContent {
+    left: 0;
+  }
+}
+
+.dark {
+  .actionContent {
+    background-color: @dark-bgc-deep;
+    box-shadow: 0 0 5px @background;
+  }
+
+  .actionIcon {
+    color: @dark-fc-gray;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .detailActionList {
+    right: 0;
+    left: auto;
+
+    .detailMusicIcon {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      right: 0;
+      left: auto;
+    }
+
+    .show {
+      right: 80px !important;
+      left: auto !important;
+    }
+
+    .actionContent {
+      right: -80px;
+      left: auto;
+    }
+
+    .showContent {
+      right: 0;
+      left: auto;
+    }
+  }
+}

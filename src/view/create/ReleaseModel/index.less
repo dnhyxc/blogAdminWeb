@@ -1,0 +1,128 @@
+@import '~@styles/common.less';
+
+.webkitScrollbarStyle(@fff, @font-5);
+
+.tag {
+  background-color: @background;
+  width: calc(25% - 4px);
+  margin-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+
+  &:not(:first-child)::before {
+    background-color: transparent !important;
+  }
+
+  &:first-child {
+    border: none;
+    border-radius: 3px;
+  }
+
+  &:nth-child(-n + 4) {
+    margin-top: 0;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.darkTag {
+  background-color: @dark-gray;
+}
+
+.datePicker {
+  width: 100%;
+}
+
+.saveDraft {
+  margin-right: 10px;
+}
+
+.drawerTitle {
+  color: @dark-fc;
+}
+
+.ReleaseModel {
+  .uploadStyle {
+    height: auto;
+  }
+
+  .uploadImg {
+    width: 200px;
+    height: auto;
+    margin-top: -23px;
+    border-radius: 5px;
+  }
+
+  .tagList {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .tagInp {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .tagBtn {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left: none;
+    }
+  }
+
+  :global {
+    .ant-upload.ant-upload-select-picture-card {
+      width: 200px;
+      height: 112px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dark {
+  :global {
+    .ant-form-item {
+      label {
+        color: @dark-fc;
+      }
+
+      .ant-input,
+      .ant-picker,
+      .ant-upload {
+        background-color: @dark-gray;
+        color: @dark-fc;
+      }
+
+      .ant-picker-input > input {
+        color: @dark-fc;
+      }
+    }
+  }
+}
+
+.tagMenu {
+  max-height: 200px;
+  overflow: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .tag {
+    width: calc(50% - 4px);
+
+    &:nth-child(-n + 4) {
+      margin-top: 5px;
+    }
+
+    &:nth-child(-n + 2) {
+      margin-top: 0;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

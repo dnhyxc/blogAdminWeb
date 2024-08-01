@@ -1,0 +1,82 @@
+@import '~@styles/common.less';
+
+.herderWrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  box-shadow: 0 15px 5px -15px #ddd;
+  background-color: @fff;
+
+  .left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .child {
+      margin-left: 5px;
+      margin-bottom: 2px;
+      font-size: 18px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .back {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+      width: auto;
+      .clickNoSelectText();
+
+      .leftIcon {
+        margin-right: 10px;
+      }
+
+      .iconWrap {
+        font-size: 26px;
+        margin-right: 10px;
+        color: @menu-active;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 45px;
+
+    .download {
+      color: @font-warning;
+      font-size: 14px;
+      margin-left: 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: @head-menu-active;
+      }
+    }
+  }
+
+  .noLogin {
+    padding-right: 106px;
+  }
+
+  .clearPadding {
+    padding-right: 0;
+  }
+}
+
+.dark {
+  background-color: @dark-bgc-deep;
+  color: @dark-fc;
+}
+
+@media screen and (max-width: 960px) {
+  max-width: 960px;
+  min-width: 350px;
+}

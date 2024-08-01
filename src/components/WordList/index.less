@@ -1,0 +1,30 @@
+@import '~@styles/common.less';
+
+.WordList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 8px 12px;
+  text-align: center;
+  background-color: @fff;
+
+  .tagList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .tag {
+      padding: 20px 15px;
+      line-height: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.3);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

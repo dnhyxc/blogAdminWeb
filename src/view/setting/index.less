@@ -1,0 +1,45 @@
+@import '~@styles/common.less';
+
+.Setting {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .layout {
+    height: 100%;
+    padding: 9px 10%;
+
+    .menuListWrap {
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  .headerWrap {
+    z-index: 1;
+  }
+
+  .headerContent {
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+  }
+}
+
+.dark {
+  .layout {
+    background-color: @dark-bgc;
+
+    .menuListWrap {
+      background-color: @dark-bgc-deep;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .Setting {
+    .layout {
+      padding: 0 0 0 0;
+    }
+  }
+}

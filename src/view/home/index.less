@@ -1,0 +1,247 @@
+@import '~@styles/common.less';
+
+.removeConfirmStyle {
+  .antdConform();
+}
+
+.darkRemoveConfirmStyle {
+  .darkAntdConform();
+}
+
+.textRun {
+  background: -webkit-linear-gradient(165deg, #3da8fa, #ffffff, #19acfb, #ffffff, #40b3ff);
+  color: transparent !important;
+  background-clip: text;
+  animation: run 92s linear infinite;
+}
+
+.container {
+  position: relative;
+
+  .changeIconWrap {
+    .changeIconWrap();
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    background-color: transparent;
+    z-index: 99;
+    color: #f1f1f1;
+
+    .headTitle {
+      .textRun;
+    }
+
+    .itemStyles {
+      color: #f1f1f1;
+
+      &:hover {
+        border-bottom: 3px solid @head-menu-active;
+        color: @head-menu-active;
+      }
+    }
+
+    .iconStyles {
+      .textRun;
+    }
+
+    .searchWrap {
+      .toSearch {
+        color: #f1f1f1;
+        transition: none;
+      }
+    }
+  }
+
+  .contentWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding: 9px 0 9px 9px;
+
+    .rightbar {
+      margin-right: 9px;
+      height: 100%;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+
+      .emptyWrap {
+        .emptyWrap();
+      }
+    }
+  }
+
+  .changePaddingTop {
+    padding: 0 0 0 0;
+  }
+
+  .wrapClassName {
+    padding-top: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .containerClassName {
+    height: 100vh;
+  }
+
+  .noMoreStyle {
+    padding: 10px 0 14px 0;
+  }
+
+  .backTop {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: @menu-active;
+    color: @fff;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+
+    .topIcon {
+      font-size: 18px;
+    }
+  }
+
+  .paddingTopStyle {
+    padding-top: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .searchWrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .toSearch {
+      padding: 0;
+      margin-left: 15px;
+
+      &:hover {
+        color: @head-menu-active;
+      }
+    }
+  }
+
+  .iconWrap {
+    cursor: pointer;
+  }
+
+  .searchIcon {
+    color: #f1f1f1;
+
+    &:hover {
+      color: @head-menu-active;
+    }
+  }
+
+  .headerStyle {
+    background-image: linear-gradient(45deg, @fff, @fff, @fff, @fff);
+    box-shadow: 0 5px 5px -5px #ddd;
+    z-index: 99;
+    color: initial;
+
+    .headTitle {
+      background: none;
+      color: initial !important;
+    }
+
+    .itemStyles {
+      color: initial;
+
+      &:hover {
+        border-bottom: 3px solid @menu-active;
+        color: @menu-active;
+      }
+    }
+
+    .iconStyles {
+      background: none;
+      color: @menu-active !important;
+    }
+
+    .searchIcon {
+      color: initial;
+
+      &:hover {
+        color: @menu-active;
+      }
+    }
+
+    .searchWrap {
+      .toSearch {
+        color: initial;
+        transition: none;
+
+        &:hover {
+          color: @menu-active;
+        }
+      }
+    }
+  }
+
+  .activeMenuStyle {
+    background: -webkit-linear-gradient(165deg, #00f7ff, #fff, #00f7ff);
+    color: transparent !important;
+    background-clip: text;
+    animation: run 29s linear infinite;
+  }
+
+  .headerDarkStyle {
+    background-image: linear-gradient(45deg, #232323, #232323, #232323, #232323);
+    box-shadow: 0 5px 5px -5px #ddd;
+  }
+}
+
+.dark {
+  .header {
+    .searchWrap {
+      .inputSearch {
+        :global {
+          .ant-input {
+            background-color: @dark-gray;
+            color: @dark-fc;
+          }
+        }
+      }
+
+      .toSearch {
+        color: #f1f1f1;
+        transition: none;
+      }
+    }
+  }
+
+  .darkIconWrap {
+    color: @dark-fc;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    .contentWrap {
+      padding: 0;
+    }
+  }
+}
+
+@keyframes run {
+  from {
+    backgroud-position: 0 0;
+  }
+
+  to {
+    background-position: 2109px 0;
+  }
+}

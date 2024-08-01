@@ -1,0 +1,156 @@
+@import '~@styles/common.less';
+
+.removeConfirmStyle {
+  .antdConform();
+}
+
+.darkRemoveConfirmStyle {
+  .darkAntdConform();
+}
+
+.Classify {
+  position: relative;
+  width: 100%;
+
+  .changeIconWrap {
+    .changeIconWrap();
+  }
+
+  .left {
+    cursor: pointer;
+  }
+
+  .contentWrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding: 9px 0 9px 9px;
+
+    .segmentedWrap {
+      position: fixed;
+      top: 65px;
+      width: calc(100% - 500px);
+      padding-bottom: 10px;
+      text-align: center;
+      background: @background;
+      z-index: 11;
+      transition: all 0.3s ease-in-out;
+
+      .segmented {
+        background: @menu-hover;
+      }
+    }
+
+    .dark {
+      background-color: @dark-bgc;
+      color: @dark-fc;
+    }
+
+    .darkSegmented {
+      background-color: @dark-bgc-deep;
+      color: @dark-fc;
+    }
+
+    .activeTagStyle {
+      background-color: @dark-gray;
+      color: @dark-fc;
+    }
+
+    .changeWidth {
+      top: 59px;
+      width: 952px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+
+      .filterList {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      .wrapClass {
+        width: 100%;
+      }
+
+      .emptyWrap {
+        .emptyWrap();
+      }
+    }
+
+    .rightbar {
+      margin-right: 9px;
+      height: 100%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .changePadding {
+      padding-top: 34px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .btn {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  // 吸顶效果样式
+  .scrollTopStyle {
+    top: 103px !important;
+  }
+}
+
+.iconWrap {
+  cursor: pointer;
+}
+
+.darkIcon {
+  color: @dark-fc;
+}
+
+@media screen and (max-width: 960px) {
+  .Classify {
+    .contentWrap {
+      padding: 0;
+
+      .segmentedWrap {
+        position: fixed;
+        top: 55px;
+        left: 6px;
+        width: calc(100% - 12px);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 0;
+        background: @background;
+        z-index: 1;
+        overflow: auto;
+
+        .segmented {
+          background: @menu-hover;
+        }
+      }
+
+      .dark {
+        background: @dark-bgc;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        padding-top: 35px;
+
+        .wrapClass {
+          padding-top: 10px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import '~@styles/common.less';
+
+.MSkeleton {
+  .skeletonWrap {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    height: 130px;
+    padding-bottom: 10px;
+    background-color: @fff;
+    border-radius: 5px;
+
+    .skeletonAvatar {
+      height: 110px;
+      width: 200px;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+
+    :global {
+      .ant-skeleton-paragraph {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .emptyText {
+    text-align: center;
+    margin: 12px 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .MSkeleton {
+    .skeletonWrap {
+      display: flex;
+      align-items: center;
+      padding-top: 15px;
+      height: 150px;
+      padding-bottom: 0;
+
+      .skeletonAvatar {
+        height: 70px;
+        width: 118px;
+        margin-left: 10px;
+        margin-bottom: 16px;
+        border-radius: 5px;
+      }
+
+      :global {
+        .ant-skeleton-paragraph {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

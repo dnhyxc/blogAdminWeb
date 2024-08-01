@@ -1,0 +1,265 @@
+@import '~@styles/common.less';
+
+.overlayClassName {
+  :global {
+    .ant-dropdown-menu {
+      background-color: @dark-bgc;
+    }
+    .ant-dropdown-menu-title-content {
+      color: @dark-fc;
+    }
+  }
+}
+
+.Profile {
+  height: 100%;
+
+  .changeIconWrap {
+    .changeIconWrap();
+  }
+
+  .containerClassName {
+    height: calc(100vh - 68px);
+  }
+
+  .wrapClassName {
+    padding: 0;
+    border-radius: 5px;
+  }
+
+  .scrollWrap {
+    background-color: @fff !important;
+    border-radius: 5px;
+  }
+
+  .header {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: @fff;
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 265px;
+
+    .title {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      margin-bottom: 130px;
+
+      .infoText {
+        position: relative;
+        z-index: 1;
+      }
+
+      .mainCover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .imageWrapStyle {
+          border-radius: 0;
+        }
+
+        .image {
+          width: 100%;
+          height: auto;
+          max-height: 265px;
+          min-height: 265px;
+          border-radius: 0;
+          cursor: default;
+        }
+      }
+
+      .changeCover {
+        padding-top: 0;
+        border: none;
+        color: @fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+
+        &:hover {
+          background-color: @shade-1;
+        }
+      }
+    }
+
+    .mainCoverImg {
+      width: auto;
+      height: 32px;
+    }
+
+    .uploadStyle {
+      height: 0;
+    }
+
+    .headerWrap {
+      position: absolute;
+      top: 75%;
+      left: 20px;
+      display: flex;
+      align-items: flex-end;
+      width: calc(100% - 20px);
+
+      .uploadWrapStyle {
+        width: 130px;
+        height: 130px;
+        top: -30px;
+        margin-right: 8px;
+      }
+
+      .uploadImg {
+        box-sizing: border-box;
+        width: 130px;
+        height: 130px;
+        border-radius: 5px;
+        border: 5px solid @fff;
+      }
+
+      .markStyle {
+        width: 130px;
+        height: 130px;
+        top: 0;
+        left: 0;
+      }
+
+      .username {
+        margin-left: 30px;
+        .ellipsis();
+      }
+
+      .uploadWrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        height: 130px;
+        background-color: @background;
+        border: 5px solid @fff;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 82px;
+    background-color: @fff;
+
+    .formWrap {
+      flex: 1;
+
+      .submit {
+        float: right;
+        margin-top: 25px;
+      }
+    }
+  }
+
+  :global(.ant-upload.ant-upload-select-picture-card) {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.dark {
+  background-color: @dark-bgc;
+
+  .scrollWrap {
+    background-color: @dark-bgc-deep !important;
+  }
+
+  .header {
+    .headerWrap {
+      .username {
+        color: @dark-fc;
+      }
+    }
+  }
+
+  .content {
+    background-color: @dark-bgc-deep;
+
+    .formWrap {
+      :global {
+        .ant-form-item {
+          label {
+            color: @dark-fc;
+          }
+
+          .ant-input {
+            background-color: @dark-gray;
+            color: @dark-fc;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .Profile {
+    margin-left: 0;
+    padding: 5px;
+    background-color: @menu-hover;
+
+    .containerClassName {
+      padding-bottom: 50px;
+      height: calc(100vh - 60px);
+    }
+
+    .header {
+      height: 230px;
+
+      .headerWrap {
+        left: 10px;
+        width: calc(100% - 10px);
+
+        .username {
+          margin-left: 0;
+        }
+      }
+
+      .title {
+        .infoText {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        .mainCover {
+          .image {
+            width: 100%;
+            height: 100%;
+            max-height: 165px;
+            min-height: 165px;
+          }
+        }
+      }
+      .headerWrap {
+        top: 35%;
+      }
+    }
+
+    .content {
+      margin-top: 0;
+      padding: 0 15px;
+    }
+  }
+
+  .dark {
+    background-color: @dark-gray;
+    .header {
+      background-color: @dark-bgc-deep;
+
+      .headerWrap {
+        color: @dark-fc;
+      }
+    }
+  }
+}

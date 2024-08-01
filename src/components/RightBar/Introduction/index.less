@@ -1,0 +1,132 @@
+@import '~@styles/common.less';
+
+.needMarginBottom {
+  margin-bottom: 10px;
+}
+
+.introductionWrap {
+  width: 260px;
+  padding: 12px 10px;
+  background-color: @fff;
+  border-radius: 5px;
+
+  .card {
+    display: flex;
+    justify-content: center;
+
+    .image {
+      margin-top: 20px;
+      height: 126px;
+      width: 126px;
+      border-radius: 126px;
+    }
+  }
+
+  .nameInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .name {
+      font-size: 26px;
+      font-weight: 600;
+      width: 100%;
+      text-align: center;
+      .ellipsis();
+    }
+
+    .desc {
+      font-size: 16px;
+      .ellipsisMore(1);
+    }
+  }
+
+  .articleInfo {
+    padding: 0 25px;
+    margin-bottom: 10px;
+
+    .statistical {
+      text-align: center;
+
+      .articleTotal {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .socialWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+
+    .link {
+      font-size: 16px;
+      margin-bottom: 15px;
+
+      &:hover {
+        color: @head-menu-active;
+      }
+    }
+
+    .github {
+      border-radius: 5px;
+      width: 120px;
+    }
+
+    .socialList {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0 10px 0;
+
+      span {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 5px;
+        background-color: @content-padding;
+        line-height: 36px;
+        color: @menu-active;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 0 5px #ccc;
+        }
+
+        &:not(:last-child) {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+
+  .pcActions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: @menu-active;
+    font-size: 16px;
+    border-radius: 5px;
+
+    &:hover {
+      color: @head-menu-active;
+    }
+  }
+
+  .dark {
+    background-color: @dark-bgc-deep;
+    color: @dark-fc;
+  }
+}
+
+.dark {
+  background-color: @dark-bgc-deep;
+  color: @dark-fc;
+}

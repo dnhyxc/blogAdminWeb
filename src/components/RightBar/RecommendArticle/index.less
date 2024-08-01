@@ -1,0 +1,104 @@
+@import '~@styles/common.less';
+
+.NewArticles {
+  width: 260px;
+  border-radius: 5px;
+
+  .contant {
+    border-radius: 5px;
+    background-color: @background;
+
+    .header {
+      font-size: 18px;
+      padding: 0 6px 10px 6px;
+      background-color: @fff;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .item {
+      margin-bottom: 1px;
+      padding: 5px 6px 6px 6px;
+      background-color: @fff;
+
+      &:last-child {
+        border-radius: 0 0 5px 5px;
+      }
+
+      &:hover {
+        box-shadow: 0 0 3px @menu-hover;
+        background-color: #f2faf6;
+        cursor: pointer;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .title {
+        font-size: 16px;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+
+      .abstract {
+        color: @font-4;
+        .ellipsis();
+
+        .likeCount {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .dark {
+      background-color: @dark-bgc-deep;
+      color: @dark-fc;
+    }
+
+    .itemDark {
+      background-color: @dark-bgc-deep;
+      color: @dark-fc;
+
+      &:hover {
+        box-shadow: 0 0 3px @dark-bgc;
+        background-color: @dark-bgc;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .ipcWrap {
+    margin-top: 10px;
+
+    a {
+      color: #666;
+      font-size: 12px;
+    }
+  }
+
+  .dark {
+    background-color: @dark-bgc;
+    color: @dark-fc;
+  }
+}
+
+.dark {
+  .ipcWrap {
+    a {
+      color: #ccc;
+    }
+  }
+}
+
+:global {
+  #__SCROLL_TOP__ {
+    position: fixed;
+    top: 65px;
+    width: 260px;
+  }
+}
+
+.changeTop {
+  top: 59px !important;
+  margin-bottom: 10px;
+}

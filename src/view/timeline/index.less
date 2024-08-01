@@ -1,0 +1,190 @@
+@import '~@styles/common.less';
+
+.removeConfirmStyle {
+  .antdConform();
+}
+
+.darkRemoveConfirmStyle {
+  .darkAntdConform();
+}
+
+.TimeLine {
+  position: relative;
+  width: 100%;
+
+  .changeIconWrap {
+    .changeIconWrap();
+  }
+
+  .contentWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding: 0 0 9px 9px;
+
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-right: 9px;
+
+      .timelineContent {
+        flex: 1;
+        padding: 3px 0 0 5px;
+
+        .timelineItem {
+          &:last-child {
+            padding-bottom: 0;
+          }
+          .date {
+            height: 35px;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 26px;
+          }
+          .dark {
+            color: @dark-fc;
+          }
+        }
+      }
+
+      .wrapClass {
+        width: 100%;
+      }
+
+      .itemClass {
+        height: 128px;
+        padding-bottom: 10px;
+
+        &:nth-last-child(2) {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        &:nth-last-child(1) {
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+      }
+
+      .imgWrapStyle {
+        width: 200px;
+      }
+
+      .cardImgWrapStyle {
+        width: 200px;
+        height: 106px;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+
+      .imgWrapClass {
+        position: absolute;
+        top: 0;
+        height: 110px !important;
+        width: auto;
+        min-height: 110px !important;
+      }
+
+      .skeletonAvatar {
+        width: 150px;
+        height: 95px;
+        margin-bottom: 2px;
+      }
+
+      .descClass {
+        .ellipsis();
+      }
+
+      .emptyWrap {
+        flex: 1;
+        margin-top: 38px;
+
+        .darkSkeleton {
+          background-color: @dark-bgc-deep;
+        }
+
+        .darkTextStyle {
+          color: @dark-fc;
+        }
+      }
+
+      .dark {
+        background-color: @dark-bgc;
+      }
+    }
+
+    .changeWidth {
+      max-width: 960px;
+      margin: auto;
+    }
+  }
+
+  .rightbar {
+    margin-top: 38px;
+  }
+
+  :global {
+    .ant-timeline-item-tail {
+      border-left: 2px solid @menu-hover;
+    }
+    .ant-timeline-item-head {
+      background-color: transparent;
+    }
+    .ant-timeline-item-head-custom {
+      top: 12.5px;
+    }
+    .ant-timeline-item-content {
+      top: 0;
+      margin: 0 0 0 20px;
+    }
+    .anticon-clock-circle {
+      background-color: @fff;
+      border-radius: 30px;
+    }
+    .ant-timeline-item-tail {
+      top: 20px;
+    }
+  }
+}
+
+.iconWrap {
+  cursor: pointer;
+}
+
+.darkIcon {
+  color: @dark-fc;
+}
+
+@media screen and (max-width: 960px) {
+  .TimeLine {
+    .contentWrap {
+      padding: 0 0 4px 9px;
+
+      .wrap {
+        padding-right: 0;
+        // padding-bottom: 10px;
+
+        .itemClass {
+          height: 100%;
+        }
+
+        .imgWrapClass {
+          position: static;
+          height: 66px !important;
+          min-height: 66px !important;
+        }
+
+        .descClass {
+          .ellipsisMore(3);
+          white-space: initial;
+        }
+
+        .emptyWrap {
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+}

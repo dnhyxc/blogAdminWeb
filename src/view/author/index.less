@@ -1,0 +1,371 @@
+@import '~@styles/common.less';
+
+.removeConfirmStyle {
+  .antdConform();
+}
+
+.darkRemoveConfirmStyle {
+  .darkAntdConform();
+}
+
+.webkitScrollbarStyle(@fff, @font-5);
+
+.AuthorContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 60px;
+  padding-bottom: 10px;
+  height: 100%;
+  background-color: @background;
+  overflow: hidden;
+
+  .changeIconWrap {
+    .changeIconWrap();
+  }
+
+  .backTop {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: @menu-active;
+    color: @fff;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+
+    .topIcon {
+      font-size: 18px;
+    }
+  }
+
+  .containerClassName {
+    height: calc(100vh - 60px);
+  }
+
+  .wrapClassName {
+    padding: 0;
+  }
+
+  .headerWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: @fff;
+    align-items: center;
+    z-index: 99;
+
+    .headerContent {
+      display: flex;
+      justify-content: flex-start;
+      height: 25px;
+      line-height: 25px;
+      font-size: 18px;
+    }
+  }
+
+  .wrap {
+    min-height: calc(100vh - 112px);
+    background-color: @background;
+    padding: 0 10%;
+
+    .infoWrap {
+      position: relative;
+      width: 100%;
+      height: auto;
+      background-color: @fff;
+      border-radius: 5px;
+
+      .mainCover {
+        width: 100%;
+
+        .imageWrapStyle {
+          border-radius: 0;
+        }
+
+        .image {
+          width: 100%;
+          height: auto;
+          max-height: 265px;
+          min-height: 200px;
+          cursor: default;
+        }
+      }
+
+      .headImg {
+        position: absolute;
+        bottom: -28px;
+        left: 12px;
+        width: 150px;
+        height: 150px;
+        border: 5px solid @fff;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        .image {
+          width: 100%;
+          height: auto;
+          cursor: default;
+        }
+      }
+
+      .mainInfo {
+        width: 100%;
+        height: auto;
+        padding: 0 10px 0 186px;
+
+        .username {
+          font-size: 26px;
+          font-weight: 600;
+          padding-bottom: 10px;
+          .ellipsis();
+        }
+
+        .info {
+          font-weight: 600;
+          padding-bottom: 10px;
+
+          .ellipsis();
+        }
+      }
+    }
+
+    .viewMore {
+      background-color: @fff;
+      width: 100%;
+      height: auto;
+      padding: 5px 10px 10px 186px;
+      margin-bottom: 10px;
+
+      .info {
+        display: block;
+        margin-bottom: 5px;
+
+        .infoLabel {
+          color: @font-4;
+          font-weight: 100;
+        }
+
+        .infoDesc {
+          text-indent: 2em;
+          margin-bottom: 10px;
+        }
+      }
+
+      .moreInfo {
+        .ellipsis();
+        display: flex;
+        justify-content: flex-start;
+        cursor: pointer;
+
+        .downIcon {
+          color: @font-4;
+        }
+      }
+
+      .viewMoreInfo {
+        margin-left: 10px;
+        color: @font-4;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow: hidden;
+      height: 100%;
+
+      .tabList {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+
+        .tab {
+          .tabBar {
+            background-color: @dark-bgc-deep;
+            color: @dark-fc;
+          }
+
+          .wrapClass {
+            width: 100%;
+          }
+
+          .timelineContent {
+            flex: 1;
+            padding: 20px 0 0 15px;
+            background-color: @fff;
+            border-radius: 5px;
+
+            .timelineItem {
+              &:last-child {
+                padding-bottom: 0;
+              }
+
+              .date {
+                height: 35px;
+                font-size: 25px;
+                font-weight: 600;
+                line-height: 26px;
+              }
+
+              .itemClass {
+                border-bottom: 1px solid @background;
+                padding: 10px 0 6px 0;
+                margin-right: 10px;
+
+                &:nth-last-child(2) {
+                  border-bottom-left-radius: 0;
+                  border-bottom-right-radius: 0;
+                }
+
+                &:last-child {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .changeWidth {
+    max-width: 960px;
+    margin: auto;
+    padding: 0;
+  }
+
+  :global {
+    .ant-tabs > .ant-tabs-nav {
+      padding: 0 10px;
+      margin-bottom: 10px;
+      background-color: @fff;
+      border-radius: 5px;
+    }
+
+    .ant-tabs-top > .ant-tabs-nav::before {
+      border-bottom: none;
+    }
+
+    .ant-timeline-item-head {
+      background-color: transparent;
+    }
+  }
+}
+
+// 暗黑样式设置
+.dark {
+  background-color: @dark-bgc;
+
+  .wrap {
+    background-color: @dark-bgc;
+    .infoWrap {
+      background-color: @dark-bgc-deep;
+      color: @dark-fc;
+    }
+
+    .viewMore {
+      background-color: @dark-bgc-deep;
+      color: @dark-fc;
+    }
+
+    .content {
+      .tabList {
+        .tab {
+          .tabBar {
+            background-color: @dark-bgc-deep;
+            color: @dark-fc;
+          }
+
+          .timelineContent {
+            background-color: @dark-bgc-deep;
+
+            .date {
+              color: @dark-fc;
+            }
+
+            .timelineItem {
+              .itemClass {
+                border-bottom: 1px solid @dark-gray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.darkIcon {
+  color: @dark-fc;
+}
+
+.iconWrap {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .AuthorContainer {
+    max-width: 960px;
+    padding-top: 50px;
+    padding-bottom: 0;
+
+    .containerClassName {
+      height: calc(100vh - 50px);
+    }
+
+    .wrapClassName {
+      padding: 5px;
+      width: 100%;
+      height: calc(100% - 50px);
+    }
+
+    .herderWrap {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .wrap {
+      padding: 0;
+
+      .content {
+        width: 100%;
+
+        .noMoreStyle {
+          padding: 10px 0 4px 0;
+        }
+      }
+
+      .infoWrap {
+        .headImg {
+          width: 125px;
+          height: 125px;
+          left: 10px;
+          bottom: -6px;
+        }
+
+        .mainInfo {
+          padding-left: 140px;
+
+          .username {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .viewMore {
+        padding: 12px 10px 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+@import '~@styles/layout.less';
+
+.container {
+  height: 100vh;
+
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: url('@/assets/images/cywl.jpg');
+      background-position: center;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 500px;
+      height: auto;
+      padding: 30px 50px 28px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(1px);
+      border-radius: 5px;
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: @font-1;
+      }
+
+      .form {
+        width: 100%;
+
+        .userInfo {
+          width: 60px;
+          text-align: justify;
+          text-align-last: justify;
+          text-justify: inter-ideograph;
+        }
+
+        // .remember,
+        .actions {
+          margin-bottom: 0;
+        }
+
+        .actions {
+          display: flex;
+          justify-content: center;
+
+          .login {
+            width: 100%;
+          }
+        }
+
+        .codeItem {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          :global {
+            .ant-form-item {
+              flex: 1;
+            }
+          }
+        }
+      }
+
+      .phoneInp {
+        width: 100%;
+      }
+
+      .forget {
+        display: flex;
+        justify-content: flex-end;
+
+        .backBtn {
+          padding: 0;
+          margin-right: 15px;
+        }
+
+        .forgetBtn {
+          padding: 0;
+        }
+      }
+
+      .resetModel {
+        .resetInfo,
+        .verifyInfo {
+          margin-bottom: 20px;
+
+          .label {
+            display: inline-block;
+            margin-bottom: 5px;
+          }
+        }
+
+        .verifyInfo {
+          position: relative;
+          margin-bottom: 35px;
+
+          .errMsg {
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+            color: @sub-7-red;
+            font-size: 13px;
+            display: none;
+          }
+
+          .showErrMsg {
+            display: block;
+          }
+        }
+
+        .resetBtnWrap {
+          margin-bottom: 10px;
+
+          .resetSubmitBtn,
+          .backLogin {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    .wrap {
+      .content {
+        width: 85%;
+        padding: 58px 40px 60px;
+
+        .resetModel {
+          max-width: 300px;
+        }
+      }
+    }
+  }
+  .remember,
+  .actions {
+    padding-left: 0 !important;
+  }
+}

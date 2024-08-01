@@ -1,0 +1,75 @@
+@import '~@styles/common.less';
+
+.titleWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .submit {
+    padding: 4px 0;
+  }
+}
+
+.darkTitleWrap {
+  .addIcon,
+  .title {
+    color: @dark-fc;
+  }
+
+  :global {
+    .ant-btn-link[disabled] {
+      color: @dark-gray;
+    }
+  }
+}
+
+.createContent {
+  .name {
+    height: 52px;
+    border-bottom: 1px solid @background;
+  }
+
+  .desc {
+    border-bottom: 1px solid @background;
+    margin-bottom: 30px;
+  }
+
+  .radio {
+    margin-bottom: 10px;
+  }
+
+  .infoText {
+    margin-right: 10px;
+  }
+
+  .info {
+    color: @font-5;
+    font-size: 12px;
+  }
+}
+
+.dark {
+  .name {
+    color: @dark-fc;
+  }
+
+  .desc {
+    .radio {
+      color: @dark-fc;
+    }
+
+    :global {
+      textarea.ant-input {
+        color: @dark-fc;
+      }
+    }
+  }
+
+  .infoText {
+    color: @dark-fc;
+  }
+
+  .info {
+    color: @dark-fc-gray;
+  }
+}

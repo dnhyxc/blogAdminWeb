@@ -1,0 +1,150 @@
+@import '~@styles/common.less';
+
+.overlayClassName {
+  :global {
+    .ant-popover-inner-content {
+      padding: 12px 0 12px 16px;
+    }
+  }
+}
+
+.darkOverlayClassName {
+  :global {
+    .ant-popover-inner-content {
+      padding: 12px 0 12px 16px;
+    }
+
+    .ant-popover-inner {
+      background-color: @dark-bgc;
+    }
+
+    .ant-popover-arrow-content {
+      --antd-arrow-background-color: @dark-bgc;
+    }
+  }
+}
+
+.drawerTitle {
+  color: @dark-fc;
+}
+
+.draftBtn {
+  padding: 4px 0 4px 5px;
+  font-size: 15px;
+}
+
+.modalTitle {
+  height: 35px;
+  line-height: 35px;
+  font-weight: 600;
+}
+
+.darkModalTitle {
+  color: @dark-fc;
+}
+
+.draftContent {
+  width: 350px;
+
+  .noMore {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    padding-right: 16px;
+    margin-top: 3px;
+  }
+
+  .containerClassName {
+    max-height: 260px;
+
+    .wrapClassName {
+      padding: 0;
+
+      .scrollWrap {
+        background-color: @fff;
+      }
+    }
+  }
+
+  .draftItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @fff;
+    border-bottom: 1px solid @background;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 16px;
+
+    .title {
+      flex: 1;
+      .ellipsis();
+    }
+
+    .actions {
+      margin-left: 10px;
+
+      .createTime {
+        .ellipsis();
+      }
+
+      .preBtn {
+        padding: 0 0 0 5px;
+      }
+
+      .editBtn {
+        padding: 0 5px;
+      }
+
+      .delBtn {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.dark {
+  .containerClassName {
+    .wrapClassName {
+      .scrollWrap {
+        background-color: @dark-bgc;
+        color: @dark-fc;
+      }
+    }
+  }
+
+  .draftItem {
+    background-color: @dark-bgc;
+    border-bottom: 1px solid @dark-gray;
+    color: @dark-fc;
+  }
+
+  .draftEmpty {
+    .empty {
+      color: @dark-fc-gray;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .draftContent {
+    width: 100%;
+
+    .noMore {
+      margin-top: 5px;
+      margin-right: 10px;
+    }
+
+    .draftItem {
+      margin-right: 10px;
+    }
+  }
+
+  .draftEmpty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 260px;
+    padding-right: 10px;
+  }
+}

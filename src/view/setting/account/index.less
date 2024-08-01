@@ -1,0 +1,149 @@
+@import '~@styles/common.less';
+
+.overlayClassName {
+  :global {
+    .ant-dropdown-menu {
+      background-color: @dark-bgc;
+    }
+    .ant-dropdown-menu-title-content {
+      color: @dark-fc;
+    }
+  }
+}
+
+.Account {
+  position: relative;
+  height: 100%;
+
+  .changeIconWrap {
+    .changeIconWrap();
+  }
+
+  .containerClassName {
+    height: calc(100vh - 68px);
+  }
+
+  .wrapClassName {
+    padding: 0;
+  }
+
+  .scrollWrap {
+    background-color: @fff !important;
+    border-radius: 5px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: @fff;
+    padding: 10px 20px;
+
+    .header {
+      font-size: 20px;
+      font-weight: 600;
+
+      .infoText {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .setList {
+      padding-top: 55px;
+
+      .setItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 66px;
+        border-bottom: 1px solid @border-gray;
+
+        &:first-child {
+          border-top: 1px solid @border-gray;
+        }
+
+        .name {
+          display: inline-block;
+          flex: 0.5;
+        }
+
+        .input {
+          flex: 0.5;
+        }
+
+        .settingBtn {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .deleteAll {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+  }
+}
+
+.dark {
+  .scrollWrap {
+    background-color: @dark-bgc-deep !important;
+  }
+
+  .content {
+    background-color: @dark-bgc-deep;
+    color: @dark-fc;
+
+    .setList {
+      .setItem {
+        border-bottom: 1px solid @dark-gray;
+
+        &:first-child {
+          border-top: 1px solid @dark-gray;
+          border-bottom: none;
+        }
+
+        .input {
+          background-color: @dark-gray;
+        }
+
+        :global {
+          .ant-input {
+            background-color: @dark-gray;
+            color: @dark-fc;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .Account {
+    margin-left: 0;
+    padding: 5px;
+    background-color: @menu-hover;
+
+    .containerClassName {
+      padding-bottom: 50px;
+      height: calc(100vh - 60px);
+    }
+
+    .content {
+      margin-top: 0;
+      padding: 0 15px;
+
+      .header {
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .dark {
+    background-color: @dark-gray;
+  }
+}

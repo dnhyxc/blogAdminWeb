@@ -1,0 +1,299 @@
+@import '~@styles/common.less';
+
+.modalConfirm {
+  :global {
+    .ant-modal-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+    }
+    .ant-modal-confirm-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .anticon {
+        display: none;
+      }
+    }
+    .ant-modal-confirm-btns {
+      display: flex;
+      justify-content: center;
+
+      .ant-btn {
+        width: 50%;
+        height: 35px;
+      }
+    }
+    .ant-modal-confirm-content {
+      text-align: center;
+      margin-left: 0 !important;
+    }
+  }
+}
+
+.darkModalConfirm {
+  :global {
+    .ant-modal-body {
+      background-color: @dark-bgc;
+      color: @dark-fc;
+    }
+    .ant-modal-confirm-body {
+      .ant-modal-confirm-title,
+      .ant-modal-confirm-content {
+        color: @dark-fc;
+      }
+    }
+  }
+}
+
+.Collection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 60px 10px 10px;
+  height: 100%;
+  background-color: @background;
+  overflow: hidden;
+
+  .changeIconWrap {
+    .changeIconWrap();
+  }
+
+  .backTop {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: @menu-active;
+    color: @fff;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+
+    .topIcon {
+      font-size: 18px;
+    }
+  }
+
+  .containerClassName {
+    height: calc(100vh - 60px);
+  }
+
+  .wrapClassName {
+    padding: 0;
+  }
+
+  .headerWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: @fff;
+    align-items: center;
+
+    .headerContent {
+      display: flex;
+      justify-content: flex-start;
+      height: 25px;
+      line-height: 25px;
+      font-size: 16px;
+    }
+  }
+
+  .wrap {
+    padding: 0 10%;
+    background-color: @background;
+
+    .infoWrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+      height: 200px;
+      margin-bottom: 10px;
+      background-color: @fff;
+      border-radius: 5px;
+      background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
+      background-size: 200% 200%;
+      animation: bgmove 5s infinite;
+      padding: 20px 30px 25px 30px;
+
+      .name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+
+        .collectionName {
+          display: flex;
+          align-items: center;
+          .ellipsis();
+        }
+
+        .actions {
+          display: flex;
+          justify-content: space-between;
+          line-height: 20px;
+          min-width: 105px;
+
+          .editIcon {
+            color: @menu-active;
+          }
+
+          .delIcon {
+            color: @danger-1-normal;
+          }
+        }
+
+        .lockIcon {
+          font-size: 22px;
+        }
+      }
+
+      .desc {
+        height: 64px;
+        line-height: 28px;
+        .ellipsisMore(2);
+      }
+
+      .userInfo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .avatar {
+          width: 50px;
+          height: 50px;
+
+          .image {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+          }
+        }
+
+        .username {
+          margin-left: 10px;
+          font-size: 16px;
+
+          .userdesc {
+            cursor: pointer;
+          }
+
+          .moreCollection {
+            display: flex;
+            align-items: center;
+            margin-top: 6px;
+            font-size: 13px;
+            cursor: pointer;
+
+            .rightIcon {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow: hidden;
+      height: 100%;
+
+      .wrapClass {
+        width: 100%;
+      }
+    }
+  }
+
+  .changeWidth {
+    width: 960px;
+    margin: auto;
+    padding: 0;
+  }
+
+  .iconWrap {
+    cursor: pointer;
+  }
+}
+
+.dark {
+  background-color: @dark-bgc;
+
+  .wrap {
+    background-color: @dark-bgc;
+  }
+}
+
+// 背景动画
+@keyframes bgmove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .Collection {
+    max-width: 960px;
+    padding: 50px 0 0;
+
+    .containerClassName {
+      height: calc(100vh - 50px);
+    }
+
+    .wrapClassName {
+      padding: 6px;
+      width: 100%;
+      height: calc(100% - 50px);
+    }
+
+    .wrap {
+      padding: 0;
+
+      .content {
+        width: 100%;
+      }
+
+      .infoWrap {
+        padding: 11px 10px 20px 10px;
+
+        .name {
+          .actions {
+            display: flex;
+            justify-content: flex-end !important;
+            line-height: 20px;
+            margin-left: 10px;
+
+            .edit {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .changeWidth {
+      width: auto;
+    }
+  }
+}
